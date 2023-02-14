@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e76bc8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: fit-content;
+    /* min-height: 100%; */
+    background-color: #98c4e9;
+    padding: 2rem;
+    border-radius: 30px;
+
+}
+.game-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-width: 36em;
+}
+h1{
+    margin-bottom: 1rem;
+}
+.score-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 18px;
+}
+.cell-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+     grid-auto-rows: minmax(100px, auto);
+    }
+    .cell{
+    box-shadow: rgba(226, 120, 173, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #2196F3;
+    cursor: pointer;
+}
+.cell.active{
+  background: yellow;
+}
+#one {
+  grid-column: 1;
+  grid-row: 1;
+
+}
+#two {
+  grid-column: 3;
+  grid-row: 1;
+}
+#three {
+  grid-column: 5;
+  grid-row: 1;
+}
+#four {
+  grid-column: 2;
+  grid-row: 2;
+}
+#five {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#six {
+  grid-column: 1;
+  grid-row: 3;
+
+}
+#seven {
+  grid-column: 3;
+  grid-row: 3;
+}
+#eight {
+  grid-column: 5;
+  grid-row: 3;
+}
+#nine {
+  grid-column: 2;
+  grid-row: 2;
+}
+#ten {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+button{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  width: fit-content;  
+  background-color: #e76bc8;
+  cursor: pointer;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: #2196F3;
+  margin-top:16px;
+  outline: none;
+  padding: 16px 36px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: #98c4e9 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button:hover {
+  background-color: #F082AC;
+}
+button:active {
+    background-color: #2196F3;
+}
