@@ -51,12 +51,13 @@ const gameOver = () => {
 }
 
 const handleGameClick = e => {
+    audioTurn.currentTime = 0
     audioTurn.play();
     blinkBox(e.target, 0)
     const correctIndex = GAME_PATTERN[USER_CLICK_COUNT]
     USER_CLICK_COUNT++
     if(e.target!==cells[correctIndex]){
-        audioTurn.pause();
+        audioTurn.pause()
         audioGameOver.play()
         alert("Gameover")
     gameOver()
@@ -65,7 +66,7 @@ const handleGameClick = e => {
   if(USER_CLICK_COUNT===LEVEL){
     GAME_PATTERN = []
     USER_CLICK_COUNT = 0
-    setTimeout(runPattern,500)
+    setTimeout(runPattern,300)
   }
 }
 
